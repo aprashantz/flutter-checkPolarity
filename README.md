@@ -1,8 +1,9 @@
 # radialgauge
 Flutter app that talks to TextBlob to generate polarity of the provided data via Flask Rest API 
 
-*************************************
+**************If you need help to run*******************
 a) Make sure flutter and python requirement is available in your device
+b) Go to pubspec.yaml file and refresh it or do pub get in command
 b) Go to lib/python_file and run flutterListener.py
 c) Run main.dart file from lib dir in your testing device.
 d) You can provide any sentece to view its polarity.
