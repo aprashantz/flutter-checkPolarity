@@ -4,9 +4,9 @@ Flutter app that talks to TextBlob to generate polarity of the provided data via
 **************If you need help to run*******************
 a) Make sure flutter and python requirement is available in your device
 b) Go to pubspec.yaml file and refresh it or do pub get in command
-b) Go to lib/python_file and run flutterListener.py
-c) Run main.dart file from lib dir in your testing device.
-d) You can provide any sentece to view its polarity.
+c) Go to lib/python_file and run flutterListener.py
+d) Run main.dart file from lib dir in your testing device.
+e) You can provide any sentece to view its polarity.
 *************************************
 For any communication, please ping me at theprashantghimire@gmail.com
 _________________________________________
