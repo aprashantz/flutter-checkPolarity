@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return 'Go to /textblob/your_data for textblob api'
+    return 'Go to /textblob for textblob api'
 
 # method to handle post request
 
