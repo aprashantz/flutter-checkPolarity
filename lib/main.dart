@@ -23,7 +23,7 @@ class _MyAppState extends State<MyApp> {
 
 //function to get polarity of the sentence
   Future getPolarity(data) async {
-    final String restAPI = 'http://192.168.0.2:4652/textblob';
+    final String restAPI = 'http://theprash.pythonanywhere.com/textblob';
     final response = await http.post(Uri.parse(restAPI),
         headers: <String, String>{
           'Content-Type': 'application/json; charset=UTF-8',
