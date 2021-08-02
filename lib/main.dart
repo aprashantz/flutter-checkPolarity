@@ -23,9 +23,12 @@ class _MyAppState extends State<MyApp> {
 
 //function to get polarity of the sentence
   Future getPolarity(data) async {
-    final String restAPI = 'http://192.168.0.2:4652/textblob/$currentSentence';
-
-    final response = await http.get(Uri.parse(restAPI));
+    final String restAPI = 'http://192.168.0.2:4652/textblob';
+    final response = await http.post(Uri.parse(restAPI),
+        headers: <String, String>{
+          'Content-Type': 'application/json; charset=UTF-8',
+        },
+        body: jsonEncode(<String, String>{"data": "$currentSentence"}));
 
     var jsonData;
     var polarity;

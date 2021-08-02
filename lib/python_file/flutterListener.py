@@ -1,5 +1,5 @@
 from logging import debug
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 from generatePolarity import getPolarity
 
 app = Flask(__name__)
@@ -9,9 +9,13 @@ app = Flask(__name__)
 def index():
     return 'Go to /textblob/your_data for textblob api'
 
+# method to handle post request
 
-@app.route('/textblob/<string:data>', methods=['GET'])
-def createPolarity(data):
+
+@app.route('/textblob', methods=['POST'])
+def createPolarity():
+    request_data = request.get_json()
+    data = request_data['data']
     generated_polarity = getPolarity(data)
     return {"polarity": generated_polarity}
 
